@@ -47,6 +47,7 @@
 
   # log
   l = log --graph --date=short
+  logg = log --graph --oneline --all --decorate
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
@@ -86,13 +87,13 @@
   t = tag -n                        # show tags with <n> lines of each tag message
 
   # svn helpers
-  svnr = svn rebase
-  svnd = svn dcommit
-  svnl = svn log --oneline --show-commit
+  #svnr = svn rebase
+  #svnd = svn dcommit
+  #svnl = svn log --oneline --show-commit
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
-  prompt = false
+  prompt = true
 [mergetool "mvimdiff"]
   cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false
@@ -100,8 +101,8 @@
   summary = true
   verbosity = 1
   tool = mvimdiff
-[apply]
-  whitespace = nowarn
+#[apply]
+#  whitespace = nowarn
 [branch]
   autosetupmerge = true
 [push]
@@ -112,13 +113,14 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
+  deltaBaseCacheLimit = 1G
 [advice]
   statusHints = false
 [diff]
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
-	algorithm = patience
+  algorithm = patience
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
