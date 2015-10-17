@@ -4,3 +4,6 @@ if [ -d $HOME/.zsh.after/ ]; then
     for config_file ($HOME/.zsh.after/*.zsh) source $config_file
   fi
 fi
+
+# Remove duplicates from PATH
+typeset -U PATH
