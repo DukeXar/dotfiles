@@ -1,0 +1,4 @@
+path=(
+    ~/opt/watchman
+    $path
+)
