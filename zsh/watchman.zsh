@@ -1,4 +1,4 @@
 path=(
-    ~/opt/watchman
+    ~/opt/bin/
     $path
 )
