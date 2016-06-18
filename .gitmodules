@@ -1,6 +1,6 @@
 [submodule "zsh/prezto"]
     path = zsh/prezto
-    url = git@github.com:DukeXar/prezto.git
+    url = https://github.com/DukeXar/prezto
     ignore = dirty
 [submodule "dircolors-solarized"]
     path = dircolors-solarized
