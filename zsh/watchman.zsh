@@ -1,4 +1,4 @@
 path=(
-    ~/opt/bin/
+    ~/opt/bin
     $path
 )
